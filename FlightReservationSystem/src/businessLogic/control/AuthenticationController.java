@@ -1,4 +1,4 @@
-package businessLogic.control;
+package businessLogic.control; 
 
 import database.UserDAO;
 import businessLogic.entity.User;
