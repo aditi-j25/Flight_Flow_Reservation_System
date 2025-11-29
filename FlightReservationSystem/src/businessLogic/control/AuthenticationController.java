@@ -10,6 +10,7 @@ import java.util.Base64;
  * <<control>>
  * Singleton Pattern - Handles authentication logic
  */
+
 public class AuthenticationController {
     private static AuthenticationController instance;
     private User currentUser;

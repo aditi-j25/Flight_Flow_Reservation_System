@@ -14,7 +14,10 @@ public abstract class User {
     private String lastName;
     private String address;
     private String phone;
-    private String role;
+    
+    private String role; //asigned only upon user creation
+     //roles: Admin, Customer, Agent
+
     private boolean receivePromotions;
     private LocalDateTime createdAt;
 

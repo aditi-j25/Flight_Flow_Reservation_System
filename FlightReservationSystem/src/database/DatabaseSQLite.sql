@@ -2,11 +2,17 @@
 CREATE TABLE IF NOT EXISTS users (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT NOT NULL UNIQUE,
-    user_password TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
-    role TEXT NOT NULL CHECK(role IN ('admin', 'customer', 'flight_agent'))
-    promotions_opt_in BOOLEAN NOT NULL DEFAULT 0
+    user_password TEXT NOT NULL,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL,
+    address TEXT,
+    phone TEXT,
+    role TEXT NOT NULL CHECK(role IN ('ADMIN', 'CUSTOMER', 'AGENT')),
+    promotions_opt_in BOOLEAN NOT NULL DEFAULT 0,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
 
 -- FLIGHTS TABLE
 CREATE TABLE IF NOT EXISTS flights (

@@ -8,7 +8,7 @@ import businessLogic.entity.*;
  */
 public class UserFactory {
 
-    /**
+    /*
      * Creates a User object of the appropriate type based on role
      * @param userId User's database ID
      * @param email User's email
@@ -56,7 +56,9 @@ public class UserFactory {
     public static User createUser(int userId, String email, String password,
                                   String firstName, String lastName, String address,
                                   String phone, String role, int receivePromotionsInt) {
+
         boolean receivePromotions = (receivePromotionsInt == 1);
+        
         return createUser(userId, email, password, firstName, lastName,
                 address, phone, role, receivePromotions);
     }

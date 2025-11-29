@@ -10,13 +10,13 @@ public class DatabaseConnection {
     public static Connection connect(){ 
     //must be public so DAO classes can use it 
 
-        Connection conn = null;
+        Connection conn = null; //initialize connection object
         try {
-            conn = DriverManager.getConnection(URL);
+            conn = DriverManager.getConnection(URL); //establish connection to the database
         } catch (SQLException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage());//print any SQL exceptions
         }
-        return conn;   
+        return conn; //return the connection object
     
     }
 }
