@@ -5,7 +5,7 @@ import presentation.*;
 
 
 
-import java.*;
+import java.util.*;
 import java.sql.*; 
 import java.time.LocalDateTime;
 
@@ -45,7 +45,7 @@ public class Main {
 
         // Test promotion system
         System.out.println("\n===== PROMOTIONS =====");
-        //sendPromotion(customer, "🎉 Special Offer: 25% OFF your next ticket!");
+        //sendPromotion(customer, "Special Offer: 25% OFF your next ticket!");
 
         // Verify data using toString()
         System.out.println("\n===== OBJECT DATA =====");
