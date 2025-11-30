@@ -1,7 +1,5 @@
 package businessLogic.entity;
 
-import java.time.LocalDateTime;
-
 /**
  * <<entity>>
  * Admin user type - can manage flights and system data
@@ -9,23 +7,24 @@ import java.time.LocalDateTime;
 public class Admin extends User {
 
     public Admin(int userId, String email, String password, String firstName,
-                 String lastName, String address, String phone, LocalDateTime createdAt) {
-
+                 String lastName, String address, String phone) {
         super(userId, email, password, firstName, lastName, address, phone,
-              "Admin", false, createdAt);
+                "ADMIN", false); // Admins don't receive promotions
     }
 
     @Override
     public void displayDashboard() {
         System.out.println("Displaying Admin Dashboard for: " + getFullName());
-        // Launch admin dashboard GUI here later
+        // This will show admin-specific features like flight management
     }
 
     public void manageFlight() {
+        // Admin-specific functionality
         System.out.println("Admin managing flights");
     }
 
     public void manageSystem() {
+        // Admin-specific functionality
         System.out.println("Admin managing system");
     }
 
