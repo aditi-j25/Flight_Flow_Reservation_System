@@ -1,6 +1,5 @@
 package businessLogic.entity;
 
-
 /**
  * <<entity>>
  * Customer user type - can book flights and receive promotions
