@@ -1,5 +1,7 @@
 package businessLogic.entity;
 
+import java.time.LocalDateTime;
+
 /**
  * <<entity>>
  * Customer user type - can book flights and receive promotions
@@ -7,22 +9,22 @@ package businessLogic.entity;
 public class Customer extends User implements PromotionObserver {
 
     public Customer(int userId, String email, String password, String firstName,
-                    String lastName, String address, String phone, boolean receivePromotions) {
+                    String lastName, String address, String phone,
+                    boolean receivePromotions, LocalDateTime createdAt) {
+
         super(userId, email, password, firstName, lastName, address, phone,
-                "CUSTOMER", receivePromotions);
+              "Customer", receivePromotions, createdAt);
     }
 
     @Override
     public void displayDashboard() {
         System.out.println("Displaying Customer Dashboard for: " + getFullName());
-        // This will be implemented by Person 2 (browsing)
     }
 
     @Override
     public void receivePromotion(String promotionMessage) {
         if (isReceivePromotions()) {
             System.out.println("Promotion received by " + getEmail() + ": " + promotionMessage);
-            // In real implementation, this could show a notification popup
         }
     }
 

@@ -14,16 +14,15 @@ public abstract class User {
     private String lastName;
     private String address;
     private String phone;
-    
-    private String role; //asigned only upon user creation
-     //roles: Admin, Customer, Agent
-
+    private String role; 
     private boolean receivePromotions;
     private LocalDateTime createdAt;
 
+    // Constructor for NEW users (created now)
     public User(int userId, String email, String password, String firstName,
                 String lastName, String address, String phone, String role,
                 boolean receivePromotions) {
+
         this.userId = userId;
         this.email = email;
         this.password = password;
@@ -33,7 +32,24 @@ public abstract class User {
         this.phone = phone;
         this.role = role;
         this.receivePromotions = receivePromotions;
-        this.createdAt = LocalDateTime.now();
+        this.createdAt = LocalDateTime.now(); // default for new users
+    }
+
+    // Constructor for users LOADED FROM DATABASE
+    public User(int userId, String email, String password, String firstName,
+                String lastName, String address, String phone, String role,
+                boolean receivePromotions, LocalDateTime createdAt) {
+
+        this.userId = userId;
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phone = phone;
+        this.role = role;
+        this.receivePromotions = receivePromotions;
+        this.createdAt = createdAt; // use DB value
     }
 
     public abstract void displayDashboard();
