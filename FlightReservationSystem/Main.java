@@ -16,18 +16,18 @@ public class Main {
         // Create example users
         Admin admin = new Admin(
                 1, "admin@gmail.com", "admin123",
-                "Alice", "Admin", "1 Admin Street", "111-222-3333", LocalDateTime.now()
+                "Alice", "Admin", "1 Admin Street", "111-222-3333"
         );
 
         Agent agent = new Agent(
                 2, "agent@gmail.com", "agent123",
-                "Bob", "Agent", "45 Agent Road", "444-555-6666", LocalDateTime.now()
+                "Bob", "Agent", "45 Agent Road", "444-555-6666"
         );
 
         Customer customer = new Customer(
                 3, "customer@gmail.com", "cust123",
                 "Charlie", "Customer", "789 Customer Ave", "777-888-9999",
-                true, LocalDateTime.now() // receives promotions
+                true // receives promotions
         );
 
         //================TESTS================//
